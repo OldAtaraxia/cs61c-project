@@ -1,0 +1,3 @@
+exercise1需要先将struct里的东西初始化一下。
+exercise2需要学习GDB commands
+

@@ -27,7 +27,9 @@ void free_list(Node *head) {
 /* Creates a new node whose data is set to DATA and adds it to the front of the
    list pointed to by HEAD.
    This function is heavily commented for instructional purposes. Please
-   never use this many comments when you are writing code. */
+   never use this many comments when you are writing code. 
+   补充一句就是head是指向指针的指针，用于修改指针的内容
+   */
 void add_to_front(struct Node **head, int data) {
     /* Check if the head is NULL to make sure that we do not dereference a NULL pointer
     because that would result in a segfault */
@@ -55,7 +57,7 @@ void print_list(struct Node *head) {
 
 /* Iteratively reverses a linked list whose first node is HEAD */
 void reverse_list(struct Node **head) {
-    if (head == NULL) {
+    if (head == NULL || *head == NULL) {
         return;
     }
     struct Node *curr = *head;

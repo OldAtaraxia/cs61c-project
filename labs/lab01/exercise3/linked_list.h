@@ -1,6 +1,9 @@
 #ifndef LINKED_LIST_H
 #define LINKED_LIST_H
 
+/*
+节点的定义
+*/
 typedef struct Node {
     int data;
     struct Node *next;
